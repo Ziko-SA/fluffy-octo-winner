@@ -127,6 +127,7 @@ print(repository_uri)
 ### **Step 2: Push the Docker image to ECR**
 
 Push the Docker image to ECR using the push commands on the console:
+Just copy past the steps one by one
 
 ```
  $ docker push <ecr_repo_uri>:<tag>
@@ -134,12 +135,25 @@ Push the Docker image to ECR using the push commands on the console:
 
 ## **Part 4: Creating an EKS cluster and deploying the app using Python**
 
-### **Step 1: Create an EKS cluster**
-
-Create an EKS cluster and add node group
-
+### **Step 1: Create an EKS cluster** you need to choose the latest add ons versions
+    to correspond to the correct Kubernetes version, in my example I used 1.25
+    kube-proxy 
+    CoreDNS
+    Amazon VPC CNI
+    ** Make sure to create the correct EKS role for the cluster and add the following permissions
+    AmazonEKSClusterPolicy
+    AmazonEKS_CNI_Policy
+    ** Make sure to add the port 5000 to the EKS SG
+    
+ Create an EKS cluster and add node group, 
+    
 ### **Step 2: Create a node group**
-
+** Make sure that you attche the corret IAM role for the nodes
+     AmazonEKSClusterPolicy
+     AmazonEKS_CNI_Policy
+     AmazonEKSWorkerNodePolicy
+    AmazonEKSWorkerNodePolicy
+    AmazonEKSServicePolicy
 Create a node group in the EKS cluster.
 
 ### **Step 3: Create deployment and service**
