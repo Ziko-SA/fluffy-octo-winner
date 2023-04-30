@@ -1,4 +1,4 @@
-# **My Flask monitor application dployed in the cloud**
+# **My Flask monitor application deployed in AWS cloud**
 
 ## Things you will Learn 🤯
 
