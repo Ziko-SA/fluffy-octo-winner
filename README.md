@@ -41,7 +41,7 @@ $ git clone <repository_url>
 The application uses the **`psutil`** and **`Flask`, Plotly, boto3** libraries. Install them using pip:
 
 ```
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### **Step 3: Run the application**
@@ -49,7 +49,7 @@ pip3 install -r requirements.txt
 To run the application, navigate to the root directory of the project and execute the following command:
 
 ```
-$ python3 app.py
+$ python app.py
 ```
 
 This will start the Flask server on **`localhost:5000`**. Navigate to [http://localhost:5000/](http://localhost:5000/) on your browser to access the application.
@@ -70,7 +70,7 @@ WORKDIR /app
 # Copy the requirements file to the working directory
 COPY requirements.txt .
 
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code to the working directory
 COPY . .
@@ -169,7 +169,7 @@ deployment = client.V1Deployment(
                 containers=[
                     client.V1Container(
                         name="my-flask-container",
-                        image="568373317874.dkr.ecr.us-east-1.amazonaws.com/my-cloud-native-repo:latest",
+                        image="407378472016.dkr.ecr.eu-west-3.amazonaws.com/my-monitor-app-repo:latestt",
                         ports=[client.V1ContainerPort(container_port=5000)]
                     )
                 ]
@@ -204,7 +204,7 @@ api_instance.create_namespaced_service(
 
 make sure to edit the name of the image on line 25 with your image Uri.
 
-- Once you run this file by running “python3 eks.py” deployment and service will be created.
+- Once you run this file by running “python eks.py” deployment and service will be created.
 - Check by running following commands:
 
 ```jsx
