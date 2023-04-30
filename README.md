@@ -1,4 +1,4 @@
-# **Cloud Native Resource Monitoring Python App on K8s!**
+# **My Flask monitor application dployed in the cloud**
 
 ## Things you will Learn 🤯
 
@@ -13,9 +13,6 @@
 5. Learn Kubernetes and Create EKS cluster and Nodegroups
 6. Create Kubernetes Deployments and Services using Python!
 ```
-
-# **Youtube Video for step by step Demonstration!**
-https://youtu.be/kBWCsHEcWnc
 
 ## **Prerequisites** !
 
